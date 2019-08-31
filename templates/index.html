@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTEats</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/tabs.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>UTEats</h1>
+    </div>
+    <div id="base">
+        <!-- Latest Works -->
+        <section id="latest-works" class="latest-works section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- Project Nav -->
+                        <div class="tab">
+                            <div class="works-menu wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                                <ul>
+                                    <li class="active" data-filter="*">All</li> 
+                                    <li data-filter=".on">On Campus</li>
+                                    <li data-filter=".off">Off Campus</li>
+                                    <li data-filter=".about">About</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/ End Project Nav -->
+                    </div>
+                </div>
+                <div>
+                    <div class="about" id="about">
+                        <p>This website shows what dining locations are currently open on campus. Off campus locations coming soon.</p>
+                    </div>
+                    <div class="isotop-active">
+                        {% for post in data %} 
+                            <div class="on" id="item">
+                                <!-- single-work -->
+                                <!-- <a href="http://hf-food.austin.utexas.edu/foodpro/nutframe2.asp?sName=The+University+of+Texas+at+Austin+%2D+Housing+and+Dining&locationNum=12&locationName=Jester+2nd+Floor+Dining&naFlag=1" target="_blank"> -->
+                                    <div class="single-work">
+                                        <img src="/static/images/{{post.name}}.png" alt="{{post.name}} Logo">
+                                        <h4 id="name">{{post.name}}</h4>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                        {% endfor %}
+                        <div class="off" id="item">
+                            <!-- single-work -->
+                            <a href="#">
+                                <div class="single-work">
+                                    <img src="/static/images/comingSoon.png" alt="Coming Soon Image">
+                                    <h4 id="name">Off Campus locations coming soon</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--/ End Works -->
+
+    <script src="/static/js/jquery.min.js">
+    </script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.nav.js"></script>
+    <script src="/static/js/jquery.slicknav.min.js"></script>
+    <script src="/static/js/easing.min.js"></script>
+    <script src="/static/js/jquery-appear.js"></script>
+    <script src="/static/js/jquery.scrollUp.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="/static/js/jquery.counterup.min.js"></script>
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <script src="/static/js/wow.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC0RqLa90WDfoJedoE3Z_Gy7a7o8PCL2jw"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

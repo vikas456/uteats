@@ -1,0 +1,366 @@
+html { 
+  background: url(images/towerbackground.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+	font-family: 'Source Sans Pro';
+}
+
+#title {
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+	font-size: 25pt;
+	font-family: 'Source Sans Pro';
+}
+
+#base {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: auto;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.latest-works{
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+.latest-works .section-title h2 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+.latest-works .section-title{
+	margin:0;
+	padding:0;
+}
+.latest-works .works-menu ul{
+    margin: 0;
+    padding: 0;
+}
+.latest-works .works-menu ul li {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+	font-size: 15px;
+	color: #333;
+	display:inline-block;
+	position: relative;
+    padding: 14px 16px;
+	position:relative;
+	cursor:pointer;
+	transition:all 0.2s ease;
+}
+.latest-works .works-menu ul li:hover {
+    background-color: #ddd;
+}
+.latest-works .works-menu ul li.active{
+	background-color: #ccc;
+}
+.latest-works .works-menu ul li i{
+	margin-right:5px;
+	font-size:14px;
+}
+.latest-works .works-menu ul li::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0px;
+	height: 1px;
+	width: 100%;
+	background: #5DADE2;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.4s ease;
+}
+.latest-works .works-menu ul li.active:before{
+	top: -4px;
+	opacity:1;
+	visibility:visible;
+}
+.latest-works .works-menu ul li:after{
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0px;
+	height: 1px;
+	width: 100%;
+	background: #5DADE2;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.4s ease;
+}
+.latest-works .works-menu ul li.active:after{
+	opacity:1;
+	visibility:visible;
+	bottom: -4px;
+}
+.latest-works .works-menu ul li:last-child{
+	margin:0;
+}
+/* single-work */
+.latest-works .single-work{
+	position:relative;
+	overflow:hidden;
+    width: 100%;
+}
+.latest-works .single-work:before{
+	background: #bf5700;
+    top:0px;
+	left:0;
+    content: "";
+    height: 100%;
+	width: 100%;
+    position: absolute;
+    transition: all 0.4s ease;
+	opacity:0;
+	visibility:hidden;
+}
+.latest-works .single-work:hover:before{
+	opacity:0.9;
+	visibility:visible;
+}
+.latest-works .single-work img{
+	width:100%;
+    height: 200px;
+}
+.latest-works .single-work .works-hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	padding: 30px;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	text-align: center;
+}
+.latest-works .single-work:hover .works-hover{
+	opacity: 1;
+	visibility: visible;
+}
+.latest-works .single-work .works-hover a{
+	display:inline-block;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+	color:#fff;
+	font-size:16px;
+}
+.latest-works .single-work .works-hover .more{
+	margin-top:20px;
+}
+.latest-works .single-work .works-hover .more a {
+	color: #fff;
+	font-size: 16px;
+	border: 2px solid #fff;
+	height: 40px;
+	width: 140px;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight:500;
+}
+.latest-works .single-work .works-hover .more a:hover{
+	color:#000;
+	border-color:#000;
+}
+.latest-works .single-work .works-hover h4 {
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+.latest-works .single-work .works-hover h4:hover{
+	color:#444;
+}
+.latest-works .single-work .works-hover h4:before{
+	position: absolute;
+    content: "";
+    left: -20px;
+    top: 8px;
+    height: 1px;
+    width: 10px;
+    background: #fff;
+}
+.latest-works .single-work .works-hover .link:before{
+	position: absolute;
+    content: "";
+    left: 50%;
+    top: -40px;
+    height: 40px;
+    width: 2px;
+    background: #fff;
+    margin-top: -20px;
+    margin-left: -1px;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+	opacity:0;
+	visibility:hidden;
+}
+.latest-works .single-work:hover .works-hover .link:before{
+	top: 50%;
+	opacity:1;
+	visibility:visible;
+}
+.latest-works .single-work .works-hover .link:after{
+	position: absolute;
+    content: "";
+    left: -40px;
+    top: 50%;
+    height: 2px;
+    width: 40px;
+    background: #fff;
+    margin-top: -1px;
+    margin-left: -20px;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+	opacity:0;
+	visibility:hidden;
+}
+.latest-works .single-work:hover .works-hover .link:after{
+	left: 50%;
+	opacity:1;
+	visibility:visible;
+}
+.latest-works .single-work .works-hover h4:after{
+	position: absolute;
+    content: "";
+    right: -20px;
+    top: 8px;
+    height: 1px;
+    width: 10px;
+    background: #fff;
+}
+.latest-works .isotop-active .col-md-4{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+#projectInfo{
+    color: white;
+    text-align: left;
+    float: left;
+}
+
+#first{
+    height: 300px;
+}
+
+#item {
+	width: 33%;
+}
+
+#name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Source Sans Pro';
+}
+
+#about {
+	font-family: 'Source Sans Pro';
+	margin: 10px;
+	padding-bottom: 10px;
+}
+
+.img {
+    height: 100px;
+}
